@@ -50,7 +50,7 @@ fn main() {
     225,131,126,43,251,62,23,195,209,
     245,123,137,102,184,161,238,85,178,
     180,107,140,88,237,252,122,139,63,].to_vec();
-    let file = File::open("/home/larrypuh/idkr-portable-linux-x86_64.AppImage").unwrap();
+    let file = File::open("test.txt").unwrap();
     let reader = BufReader::new(file);
     let mut block: Vec<u8> = Vec::new(); // This variable Holds a vector of the current block(16 bytes)
     let mut count = 1;
