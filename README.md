@@ -9,12 +9,12 @@ Here i will show how my 16 byte fingerprint algorythm works
 
 The first 16 bytes of the file will be the base.
 then i iterate trough the file 16 bytes at the time and set base to the return value of the cipher function, i will explain the cipher function below
-
-CIPHER FUNCTION:
-First we will create a Vec<u8> that will store our output
-then we loop trough our block(16 bytes) and xor it with the base,
+<br>
+CIPHER FUNCTION:<br>
+First we will create a Vec<u8> that will store our output<br>
+then we loop trough our block(16 bytes) and xor it with the base,<br>
 after it has done it to each byte we will set the base to the base put through our substitution box that looks like this: 
-
+<br>
 86,148,229,146,17,127,199,9,2,100,
     134,204,175,186,151,196,164,104,
     98,145,103,173,57,76,47,105,3,
@@ -43,20 +43,19 @@ after it has done it to each byte we will set the base to the base put through o
     225,131,126,43,251,62,23,195,209,
     245,123,137,102,184,161,238,85,178,
     180,107,140,88,237,252,122,139,63,
-
+<br>
 My s-box was inspired by rjindael s-box https://en.wikipedia.org/wiki/Rijndael_S-box which was used for the aes encryption algorythm
+<br>
+HOW XOR WORKS:<br>
+xor is a common task done by a computer where we have a byte(8 bits)<br>
+and we also have the other byte that we want to xor with the first byte<br>
+if the bit is the same then 0 else 1<br>
+<br>
+Example:<br>
+first byte:  10010110<br>
+second byte: 01011011<br>
+output:      11001101<br>
 
-HOW XOR WORKS:
-xor is a common task done by a computer where we have a byte(8 bits)
-and we also have the other byte that we want to xor with the first byte
-if the bit is the same then 0 else 1
-
-Example:
-first byte:  10010110
-second byte: 01011011
-output:      11001101
-             ^^^^^^^^
-             !!==!!=!
 
 SIMPLE EXPLANATION:
 If u didnt understand the explanataion over, then this is a simpler explanation
