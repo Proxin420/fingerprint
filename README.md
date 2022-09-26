@@ -46,6 +46,18 @@ after it has done it to each byte we will set the base to the base put through o
 
 My s-box was inspired by rjindael s-box https://en.wikipedia.org/wiki/Rijndael_S-box which was used for the aes encryption algorythm
 
+HOW XOR WORKS:
+xor is a common task done by a computer where we have a byte(8 bits)
+and we also have the other byte that we want to xor with the first byte
+if the bit is the same then 0 else 1
+
+Example:
+first byte:  10010110
+second byte: 01011011
+output:      11001101
+             ^^^^^^^^
+             !!==!!=!
+
 SIMPLE EXPLANATION:
 If u didnt understand the explanataion over, then this is a simpler explanation
 first it will set the first 16 bytes of the file to the base
